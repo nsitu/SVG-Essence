@@ -1,7 +1,8 @@
 const express = require('express')
 const {spawn} = require('child_process');
 const app = express()
-const port = 3000
+const PORT = process.env.PORT || 5000
+
 app.get('/', (req, res) => {
 var largeDataSet = [];
  // spawn new child process to call the python script
@@ -19,5 +20,5 @@ var largeDataSet = [];
  });
  
 })
-app.listen(port, () => console.log(`Example app listening on port 
-${port}!`))
+app.listen(PORT, () => console.log(`Example app listening on port 
+${PORT}!`))
