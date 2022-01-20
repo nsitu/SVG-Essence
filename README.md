@@ -2,7 +2,7 @@
 A NodeJS API to flatten SVG files into simple line art.
 
 # Background
-I needed a mechanism to simplify SVG files.  I like [SVGO](https://github.com/svg/svgo) except for the fact that it [does not support baking of transforms](https://github.com/svg/svgo/issues/624). Instead I am using [vpype](https://github.com/abey79/vpype) which has all the right features. It is a Python script that runs on a server. I am making vpype it accessible via a NodeJS Express application, that works as a simple API:
+I needed a mechanism to simplify SVG files.  I like [SVGO](https://github.com/svg/svgo) except for the fact that it [does not support baking of transforms](https://github.com/svg/svgo/issues/624). Instead I am using [vpype](https://github.com/abey79/vpype) which has all the right features. It is a Python script that runs on a server. I am making vpype accessible via a NodeJS Express application, that works as a simple API:
 
 ## Upload SVG Files
 * Listen for POST requests on the `/upload` endpoint.
