@@ -1,7 +1,6 @@
 
 let uploadedSVG = '';
  
-const svgContainer = document.getElementById('svgContainer'); 
 const dragAndDrop = document.getElementById('dragAndDrop'); 
 
 // Check if browser supports file drag and drop
@@ -39,12 +38,30 @@ dragAndDrop.ondrop = function(e) {
         formData.append('file', file) 
         fetch('/upload', {  method: 'POST',  body: formData  })
             .then(response => response.json())
-            .then((data) => { console.log('finished upload', data); })
+            .then((status) => showStatus(status) )
             .catch((err) => { console.log('upload error', err); })
     } 
     return false;
 };
  
+function showStatus(status){
+
+    let statusBox = document.getElementById('status'); 
+    statusBox.innerHTML= 'SVG Has been uploaded.';
+    console.log('finished upload', status);
+ 
+
+    const svgContainer = document.getElementById('svgContainer'); 
+
+    fetch(status.url)
+        .then(response => response.text())
+        .then(svg => {
+            svgContainer.innerHTML = svg
+            svgContainer.style.display = "block"
+        })
+        .catch(console.error.bind(console));
+
+}
  
     
   
