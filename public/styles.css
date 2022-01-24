@@ -1,0 +1,87 @@
+body{
+    font-family: arial, helvetica, sans-serif;
+    text-align: center;
+  }
+   
+  
+  #dragAndDrop.hover { 
+    border: 10px dashed #333; 
+  }
+  
+  #dragAndDrop {   
+    box-sizing: border-box;
+    border: 10px dashed #ccc; 
+    height: 100%;
+    color: #aaa; 
+    display: flex;
+    align-items: center;
+  }
+  #dragAndDrop p{
+    margin: 20px;
+  }
+  
+  
+  
+   
+  
+  #svgContainer{
+    width: 25%;
+    box-sizing: border-box;
+    border: 10px solid #999; 
+    height: 100%;
+  
+    margin: 0 10px 0 0;
+    align-self: center;
+    display: none;
+  }
+  
+   
+  #uploadArea{
+    margin-right: 15px;
+  }
+     
+   
+  
+  
+  #status{ 
+    text-align: center;
+    padding: 30px;
+  }
+   .processed{
+     border: 5px solid #ccc;
+   }
+  
+   .finished{
+     color: green;
+   }
+  
+   .loading{
+     background-image: url(loading.gif);
+     background-repeat: no-repeat;
+     background-position: center left;
+     padding: 0 0 0 30px;
+   }
+   
+  
+  #banner{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  #banner h3{
+    margin-right: 30px;
+  }
+  
+  footer p{
+    font-size: 0.8em;
+    color: #666;
+    
+    width: 60%;
+    margin: 30px auto ;
+  }
+  
+  
+  footer a{
+    color: #ff6600;
+  }
