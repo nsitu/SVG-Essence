@@ -1,6 +1,0 @@
-build:
-  - npm install
-  - pip install -r requirements.txt
-
-start:
-  - src/node index.js
