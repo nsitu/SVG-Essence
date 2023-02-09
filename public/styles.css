@@ -20,7 +20,10 @@ body{
     margin: 20px;
   }
   
-  
+  #downloadLink{ 
+    display: none;
+  }
+
   #svgContainer{
     width: 25%;
     box-sizing: border-box;

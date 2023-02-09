@@ -51,13 +51,21 @@ function showStatus(status){
     console.log('finished upload', status);
  
 
-    const svgContainer = document.getElementById('svgContainer'); 
+    const svgContainer = document.getElementById('svgContainer');  
+    const downloadLink = document.querySelector('#downloadLink'); 
 
     fetch(status.url)
         .then(response => response.text())
         .then(svg => {
             svgContainer.innerHTML = svg
             svgContainer.style.display = "block"
+
+            
+            downloadLink.style.display = "block"
+
+            let blob = new Blob([svg], {type : 'image/svg+xml'});
+            downloadLink.href = URL.createObjectURL(blob);
+
         })
         .catch(console.error.bind(console));
 
