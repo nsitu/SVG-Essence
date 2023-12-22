@@ -1,2 +1,2 @@
 # Python Requirements
-vpype[all]
+vpype
