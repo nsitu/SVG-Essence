@@ -3,8 +3,7 @@ FROM nikolaik/python-nodejs:python3.12-nodejs20-alpine
 # All images have a default user pn with uid 1000 and gid 1000.
 USER pn
 WORKDIR /home/pn/app 
-COPY . /home/pn/app/
-USER root
+COPY . /home/pn/app/ 
 
 # install dependencies for with Alpine Package Keeper 
 RUN apk update && apk upgrade
@@ -16,6 +15,5 @@ RUN npm install --production && npm cache clean --force
 
 ENV NODE_ENV production
 ENV PORT 80
-EXPOSE 80
-USER pn
+EXPOSE 80 
 CMD [ "npm", "start"]
