@@ -1,12 +1,15 @@
-FROM nikolaik/python-nodejs:latest
+FROM nikolaik/python3.12-nodejs20-alpine	
 # See also https://github.com/nikolaik/docker-python-nodejs
 # All images have a default user pn with uid 1000 and gid 1000.
 USER pn
 WORKDIR /home/pn/app 
 COPY . /home/pn/app/
 USER root
+
 # install dependencies for with Alpine Package Keeper 
-RUN apk add libgeos-dev
+RUN apk update && apk upgrade
+RUN apk add --no-cache make g++ bash git openssh curl libgeos-dev
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 USER pn
