@@ -11,7 +11,7 @@ const {spawn} = require('child_process');
 //const { exec } = require('child_process');
 
 const app = express()
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 80
 
 // serve up a static frontend.
 app.use(express.static('public'))
@@ -20,6 +20,7 @@ app.use(fileUpload());
 
 // folder to store uploads
 const dir = __dirname+'/uploads';
+console.log('lets confirm existence of ' + dir)
 if (!fs.existsSync(dir)) fs.mkdirSync(dir); 
 
 
