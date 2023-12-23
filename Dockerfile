@@ -1,11 +1,11 @@
-FROM nikolaik/python-nodejs:python3.10-nodejs20-alpine
+FROM nikolaik/python-nodejs:python3.10-nodejs20
 # See also https://github.com/nikolaik/docker-python-nodejs
 # All images have a default user pn with uid 1000 and gid 1000. 
 WORKDIR /home/pn/app 
 COPY . /home/pn/app  
 # install dependencies with Alpine Package Keeper  
-RUN apk update 
-RUN apk add --no-cache geos libblas liblapack gfortran build-base
+# RUN apk update 
+# RUN apk add --no-cache geos libblas liblapack gfortran build-base
 
 RUN pip install --no-cache-dir pipx 
 # Make sure pipx binaries are available in the PATH
