@@ -5,7 +5,8 @@ WORKDIR /home/pn/app
 COPY . /home/pn/app  
 # install dependencies with Alpine Package Keeper  
 RUN apk add --no-cache geos 
-RUN pip install --no-cache-dir -r requirements.txt 
+RUN pipx install "vpype[all]"
+# RUN pip install --no-cache-dir -r requirements.txt 
 RUN npm install --production && npm cache clean --force 
 ENV NODE_ENV production
 ENV PORT 80
