@@ -5,11 +5,14 @@ USER pn
 WORKDIR /home/pn/app 
 COPY . /home/pn/app/ 
 
+USER root
 # install dependencies for with Alpine Package Keeper 
 RUN apk update && apk upgrade
 RUN apk add --no-cache make g++ bash git openssh curl geos
 
 RUN pip install --no-cache-dir -r requirements.txt
+
+USER pn
  
 RUN npm install --production && npm cache clean --force
 
