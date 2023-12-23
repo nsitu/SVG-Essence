@@ -1,4 +1,4 @@
-FROM nikolaik/python3.12-nodejs20-alpine	
+FROM nikolaik/python-nodejs:python3.12-nodejs20-alpine
 # See also https://github.com/nikolaik/docker-python-nodejs
 # All images have a default user pn with uid 1000 and gid 1000.
 USER pn
