@@ -1,4 +1,4 @@
 # Python Requirements 
-setuptools
+setuptools>=67
 appdirs
 vpype   # https://pypi.org/project/vpype/
