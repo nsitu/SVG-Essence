@@ -8,7 +8,7 @@ USER root
 
 # install dependencies for with Alpine Package Keeper 
 RUN apk update && apk upgrade
-RUN apk add --no-cache make g++ bash git openssh curl libgeos
+RUN apk add --no-cache make g++ bash git openssh curl 
 
 RUN pip install --no-cache-dir -r requirements.txt
 
