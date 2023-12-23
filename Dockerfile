@@ -8,8 +8,8 @@ COPY . /home/pn/app
 # RUN apk add --no-cache geos libblas liblapack gfortran build-base
 
 RUN pip install --no-cache-dir pipx 
-# Make sure pipx binaries are available in the PATH
-ENV PATH="/root/.local/bin:$PATH"
+# Make sure pipx binaries are available in the PATH 
+ENV PATH="/root/.local/bin:${PATH}"
 RUN pipx install --verbose "vpype"
 # RUN pip install --no-cache-dir -r requirements.txt 
 RUN npm install --production && npm cache clean --force 
