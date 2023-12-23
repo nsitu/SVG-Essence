@@ -8,7 +8,7 @@ RUN apk add --no-cache geos
 RUN pip install --no-cache-dir pipx 
 # Make sure pipx binaries are available in the PATH
 ENV PATH="/home/pn/.local/bin:$PATH"
-RUN pipx install "vpype"
+RUN pipx install --verbose "vpype"
 # RUN pip install --no-cache-dir -r requirements.txt 
 RUN npm install --production && npm cache clean --force 
 ENV NODE_ENV production
