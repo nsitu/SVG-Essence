@@ -9,7 +9,7 @@ COPY . /home/pn/app
 
 RUN pip install --no-cache-dir pipx 
 # Make sure pipx binaries are available in the PATH
-ENV PATH="/home/pn/.local/bin:$PATH"
+ENV PATH="/root/.local/bin:$PATH"
 RUN pipx install --verbose "vpype"
 # RUN pip install --no-cache-dir -r requirements.txt 
 RUN npm install --production && npm cache clean --force 
