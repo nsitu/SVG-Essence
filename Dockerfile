@@ -4,7 +4,9 @@ FROM nikolaik/python-nodejs:python3.10-nodejs20-alpine
 WORKDIR /home/pn/app 
 COPY . /home/pn/app  
 # install dependencies with Alpine Package Keeper  
-RUN apk add --no-cache geos 
+RUN apk update 
+RUN apk add --no-cache geos libblas liblapack gfortran build-base
+
 RUN pip install --no-cache-dir pipx 
 # Make sure pipx binaries are available in the PATH
 ENV PATH="/home/pn/.local/bin:$PATH"
