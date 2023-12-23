@@ -11,12 +11,11 @@ RUN apk update && apk upgrade
 RUN apk add --no-cache make g++ bash git openssh curl geos
 
 RUN pip install --no-cache-dir -r requirements.txt
-
-USER pn
+ 
 RUN npm install --production && npm cache clean --force
 
 ENV NODE_ENV production
 ENV PORT 80
 EXPOSE 80
-
+USER pn
 CMD [ "npm", "start"]
