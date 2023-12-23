@@ -1,5 +1,5 @@
 # Python Requirements 
-shapely>=2.0.2
-setuptools>=67
-appdirs
-vpype   # https://pypi.org/project/vpype/
+#shapely>=2.0.2
+#setuptools>=67
+#appdirs
+vpype>=1.13.0   # https://pypi.org/project/vpype/
