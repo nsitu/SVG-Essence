@@ -1,2 +1,4 @@
 # Python Requirements 
+setuptools
+appdirs
 vpype   # https://pypi.org/project/vpype/
