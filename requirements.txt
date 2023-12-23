@@ -1,2 +1,2 @@
-# Python Requirements
-vpype
+# Python Requirements 
+vpype   # https://pypi.org/project/vpype/
