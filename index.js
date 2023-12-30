@@ -41,13 +41,21 @@ app.post('/upload', function(req, res) {
       return res.status(500).json(log)  
     } 
     try { 
+      // let args = [
+      //   '--verbose',
+      //   'read', uploadFilePath,
+      //   'scaleto', '23in', '23in',
+      //   'linemerge', '--tolerance', '1in',
+      //   'linesimplify', '--tolerance', '0.01in',
+      //   'write', '--page-size', '24inx24in', '--center',
+      //   outputFilePath
+      // ]  
       let args = [
         '--verbose',
         'read', uploadFilePath,
-        'scaleto', '23in', '23in',
-        'linemerge', '--tolerance', '1in',
-        'linesimplify', '--tolerance', '0.01in',
-        'write', '--page-size', '24inx24in', '--center',
+        'linemerge',
+        'linesimplify',
+        'write', 
         outputFilePath
       ]  
       const vpype = spawn('vpype', args );
