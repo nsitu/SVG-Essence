@@ -53,6 +53,7 @@ app.post('/upload', function(req, res) {
       let args = [
         '--verbose',
         'read', uploadFilePath,
+        'scaleto', '256px', '256px',
         'linemerge',
         'linesimplify',
         'write', 
